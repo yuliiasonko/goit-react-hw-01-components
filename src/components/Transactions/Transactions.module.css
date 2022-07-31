@@ -1,0 +1,30 @@
+.transaction {
+    color: black;
+    width: 500px;
+    border-collapse: collapse;
+    border: 1px solid rgb(12, 1, 1);
+    border-color: #6a2a76;
+    text-align: center;
+    margin: auto auto;
+    margin-top: 30px;
+  }
+  
+  th {
+    border: 1px solid rgb(12, 1, 1);
+    border-color: #6a2a76;
+    background-color: #6a2a76;
+    color: rgb(231, 155, 217);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+  }
+  td {
+    border: 1px solid rgb(12, 1, 1);
+    border-color: #6a2a76;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+  }
+  
+  
