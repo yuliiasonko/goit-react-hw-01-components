@@ -8,15 +8,18 @@ const Statistica = ({ title, stats }) => (
     {title==="UPLOAD STATS" && (<h2 className={styles.title}>{title}</h2>)
 }
      <ul className={styles.stat_list}>
-        {stats.map(stat => (
-          <li className={styles.item} key={stat.id}>
-            <span className={styles.label}>{stat.label}</span>
-            <span className={styles.percentage}>{stat.percentage}%</span>
+        {stats.map(({ id, label, percentage }) => {
+        return (
+          <li className={styles.item} key={id}>
+            <span className={styles.label}>{label}</span>
+            <span className={styles.percentage}>{percentage}%</span>
           </li>
-        ))}
+        )
+        })}
     </ul>
   </section>
 );
+
 
 Statistica.propTypes = {
   title: PropTypes.string,

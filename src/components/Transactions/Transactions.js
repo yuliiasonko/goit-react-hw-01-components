@@ -13,16 +13,19 @@ const Transactions = ({ items }) => (
     </thead>
 
     <tbody>
-      {items.map(item => (
-        <tr key={item.id}>
-          <td>{item.type}</td>
-          <td>{item.amount}</td>
-          <td>{item.currency}</td>
+      {items.map(({ id, type, amount, currency }) => {
+return (
+        <tr key={id}>
+          <td>{type}</td>
+          <td>{amount}</td>
+          <td>{currency}</td>
         </tr>
-      ))}
+)
+})}
     </tbody>
   </table>
 );
+
 
 Transactions.propTypes = {
   itemss: PropTypes.arrayOf(
