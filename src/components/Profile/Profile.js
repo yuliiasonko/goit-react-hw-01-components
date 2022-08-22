@@ -13,7 +13,7 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
       <p className={styles.location}>{location}</p>
     </div>
 
-    <ul className={styles.stats}>
+    {/* <ul className={styles.stats}>
       <li>
         <span className={styles.label}>Followers</span>
         <span className={styles.quantity}>{stats.followers}</span>
@@ -26,6 +26,26 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
         <span className={styles.label}>Likes</span>
         <span className={styles.quantity}>{stats.likes}</span>
       </li>
+    </ul>
+  </div>
+); */}
+
+    
+    <ul className={styles.stats}>
+    {stats.map(({followers, views, likes}) => {
+        return (
+      <li>
+            <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{followers}</span>
+      
+            <span className={styles.label}>Views</span>
+            <span className={styles.quantity}>{views}</span>
+  
+            <span className={styles.label}>Likes</span>
+            <span className={styles.quantity}>{likes}</span>
+      </li>
+      ) 
+    })}
     </ul>
   </div>
 );
